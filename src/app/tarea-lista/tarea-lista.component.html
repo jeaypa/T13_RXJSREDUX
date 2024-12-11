@@ -1,0 +1,10 @@
+<ul>
+    <li *ngFor="let tarea of tareas">
+      <span [class.completada]="tarea.completada">
+        {{ tarea.descripcion }}
+      </span>
+      <button (click)="cambiarEstado(tarea.id)">
+        {{ tarea.completada ? 'Pendiente' : 'Completada' }}
+      </button>
+    </li>
+</ul>

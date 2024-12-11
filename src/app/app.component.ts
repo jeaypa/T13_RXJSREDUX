@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { BarraSuperiorComponent } from './barra-superior/barra-superior.component';
+import { TareaFormularioComponent } from './tarea-formulario/tarea-formulario.component';
+import { TareaListaComponent } from './tarea-lista/tarea-lista.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [BarraSuperiorComponent, TareaFormularioComponent, TareaListaComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  title = 'evaluacion';
-}
+export class AppComponent {}
